@@ -1,0 +1,11 @@
+<template>
+  <ul>
+  	<li repeat.for="todo of todos">
+  		<input type="checkbox" checked.bind="todo.done" />
+  		<span css="text-decoration: ${ todo.done ? 'line-through' : 'none' }" class="item">
+  			${ todo.title }
+  		</span>
+  		<a href="#" click.delegate="delete(todo)" class="delete">delete</a>
+  	</li>
+  </ul>
+</template>
